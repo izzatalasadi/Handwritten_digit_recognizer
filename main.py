@@ -11,7 +11,7 @@ from PIL import Image
 class HandwrittenDigitRecognizer:
     def __init__(self):
         self.model = None  # Placeholder for the neural network model
-        self.optimizer = tf.keras.optimizers.Adadelta(learning_rate=1.0)  # Optimizer for the model
+        self.optimizer = tf.keras.optimizers.legacy.Adadelta(learning_rate=1.0)  # Optimizer for the model
 
     def load_data(self):
         # Load the MNIST dataset and preprocess it
@@ -63,5 +63,5 @@ if __name__ == "__main__":
     recognizer.train_model()  # Train the model using the dataset
     recognizer.evaluate_model()  # Evaluate the model's performance
     
-    image_path = 'all.jpeg'  # Replace with the actual path to the image
+    image_path = '7.jpeg'  # Replace with the actual path to the image
     recognizer.predict_digits_in_image(image_path)  # Predict digits in the specified image
