@@ -63,5 +63,5 @@ if __name__ == "__main__":
     recognizer.train_model()  # Train the model using the dataset
     recognizer.evaluate_model()  # Evaluate the model's performance
     
-    image_path = '7.jpeg'  # Replace with the actual path to the image
+    image_path = '7.png'  # Replace with the actual path to the image
     recognizer.predict_digits_in_image(image_path)  # Predict digits in the specified image
